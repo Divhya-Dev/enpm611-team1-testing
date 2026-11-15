@@ -12,10 +12,12 @@ from model import Issue, State
 
 class TestLabelResolutionDataLoader(unittest.TestCase):
     def setUp(self):
+        #TODO: save the original global issues state and reset it before each test.
         self.original_issues = data_loader._ISSUES
         data_loader._ISSUES = None
 
     def tearDown(self):
+        #TODO: restore the original global issues state after each test runs.
         data_loader._ISSUES = self.original_issues
 
     def write_dataset(self, records):
@@ -26,6 +28,7 @@ class TestLabelResolutionDataLoader(unittest.TestCase):
         return handle.name
 
     def label_resolution_records(self):
+        # provides mock issue records with labels and events for testing.
         return [
             {
                 "number": 101,
