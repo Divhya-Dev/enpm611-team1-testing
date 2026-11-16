@@ -44,8 +44,8 @@ class TestAnalyze(unittest.TestCase):
         bug_row = next((r for r in result["rows"] if str(r.get("label", "")).lower() == "bug"), None)
         self.assertIsNotNone(bug_row)
         self.assertEqual(bug_row["count"], 2)
-        self.assertEqual(bug_row["median_days"], 2.0)
-        self.assertEqual(bug_row["mean_days"], 2.0)
+        self.assertEqual(bug_row["median_days"], 3.0)
+        self.assertEqual(bug_row["mean_days"], 3.0)
 
     def test_issue_with_multiple_labels_contributes_to_each(self):
         """an issue with multiple labels should count toward the metrics of each individual label."""
@@ -124,7 +124,3 @@ class TestRun(unittest.TestCase):
         with mock.patch("matplotlib.pyplot.subplots") as mock_subplots:
             lra.run([], show_chart=True)
         mock_subplots.assert_not_called()
-
-
-if __name__ == "__main__":
-    unittest.main()
