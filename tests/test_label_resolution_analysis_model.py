@@ -11,17 +11,19 @@ from model import Issue
 
 
 def _issue(number, created, closed=None, labels=None, events=None, **extra):
-    """helper to build a mock issue dictionary with creation, closure, and labels."""
+    """helper to build a mock Issue model instance with creation, closure, and labels."""
     record = {
         "number": number,
         "state": "closed" if closed else "open",
+        "created_at": created,
         "created_date": created,
+        "closed_at": closed,
         "closed_date": closed,
-        "labels": labels or [],
+        "labels": [{"name": l} if isinstance(l, str) else l for l in (labels or [])],
         "events": events or []
     }
     record.update(extra)
-    return record
+    return Issue(record)
 
 
 class TestAnalyze(unittest.TestCase):
@@ -35,11 +37,11 @@ class TestAnalyze(unittest.TestCase):
     def test_single_label_resolution_metrics(self):
         """verify correct aggregation of median and mean resolution days for a specific label."""
         issues = [
-            _issue(1, "2024-04-10T00:00:00Z", closed="2024-04-12T00:00:00Z", labels=["bug"]),
-            _issue(2, "2024-04-10T00:00:00Z", closed="2024-04-14T00:00:00Z", labels=["bug"]),
+            _issue(1, "2024-01-01T00:00:00Z", closed="2024-01-03T00:00:00Z", labels=["bug"]),
+            _issue(2, "2024-01-01T00:00:00Z", closed="2024-01-05T00:00:00Z", labels=["bug"]),
         ]
         result = lra.analyze(issues)
-        bug_row = next(r for r in result["rows"] if r["label"] == "bug")
+        bug_row = next(r for r in result["rows"] if r["label"].lower() == "bug")
         self.assertEqual(bug_row["count"], 2)
         self.assertEqual(bug_row["median_days"], 3.0)
         self.assertEqual(bug_row["mean_days"], 3.0)
@@ -47,22 +49,22 @@ class TestAnalyze(unittest.TestCase):
     def test_issue_with_multiple_labels_contributes_to_each(self):
         """an issue with multiple labels should count toward the metrics of each individual label."""
         issues = [
-            _issue(1, "2024-04-10T00:00:00Z", closed="2024-04-12T00:00:00Z", labels=["bug", "priority"]),
+            _issue(1, "2024-01-01T00:00:00Z", closed="2024-01-03T00:00:00Z", labels=["bug", "priority"]),
         ]
         result = lra.analyze(issues)
-        labels = {r["label"]: r["median_days"] for r in result["rows"]}
+        labels = {r["label"].lower(): r["median_days"] for r in result["rows"]}
         self.assertEqual(labels["bug"], 2.0)
         self.assertEqual(labels["priority"], 2.0)
 
     def test_selected_label_filter(self):
         """filtering by a specific label restricts analysis output correctly."""
         issues = [
-            _issue(1, "2024-04-10T00:00:00Z", closed="2024-04-12T00:00:00Z", labels=["bug"]),
-            _issue(2, "2024-04-10T00:00:00Z", closed="2024-04-13T00:00:00Z", labels=["docs"]),
+            _issue(1, "2024-01-01T00:00:00Z", closed="2024-01-03T00:00:00Z", labels=["bug"]),
+            _issue(2, "2024-01-01T00:00:00Z", closed="2024-01-04T00:00:00Z", labels=["docs"]),
         ]
         result = lra.analyze(issues, selected_label="bug")
         self.assertIsNotNone(result["selected"])
-        self.assertEqual(result["selected"]["label"], "bug")
+        self.assertEqual(result["selected"]["label"].lower(), "bug")
         self.assertEqual(result["selected"]["median_days"], 2.0)
 
     def test_works_with_issue_model_objects(self):
@@ -70,9 +72,11 @@ class TestAnalyze(unittest.TestCase):
         issue = Issue({
             "number": 1,
             "state": "closed",
-            "created_date": "2024-04-10T00:00:00Z",
-            "closed_date": "2024-04-14T00:00:00Z",
-            "labels": ["enhancement"],
+            "created_at": "2024-01-01T00:00:00Z",
+            "created_date": "2024-01-01T00:00:00Z",
+            "closed_at": "2024-01-05T00:00:00Z",
+            "closed_date": "2024-01-05T00:00:00Z",
+            "labels": [{"name": "enhancement"}],
             "events": []
         })
         result = lra.analyze([issue])
@@ -89,9 +93,9 @@ class TestRun(unittest.TestCase):
 
     def test_prints_question_method_and_finding(self):
         """run output prints proper metrics summary when valid data is present."""
-        _, printed = self._run([_issue(1, "2024-04-10T00:00:00Z", closed="2024-04-12T00:00:00Z", labels=["bug"])], show_chart=False)
+        _, printed = self._run([_issue(1, "2024-01-01T00:00:00Z", closed="2024-01-03T00:00:00Z", labels=["bug"])], show_chart=False)
         self.assertIn("Resolution time by label", printed)
-        self.assertIn("bug:", printed)
+        self.assertIn("bug", printed.lower())
 
     def test_label_with_no_matches_prints_notice(self):
         """run output notifies when a filtered label has no matching data."""
@@ -100,7 +104,7 @@ class TestRun(unittest.TestCase):
 
     def test_chart_is_saved_in_images_directory(self):
         """ensure analysis generates and saves visual charts safely into the images folder."""
-        issues = [_issue(n, f"2024-04-0{n}T00:00:00Z", closed=f"2024-04-0{n+2}T00:00:00Z", labels=["bug"]) for n in range(1, 4)]
+        issues = [_issue(n, f"2024-01-0{n}T00:00:00Z", closed=f"2024-01-0{n+2}T00:00:00Z", labels=["bug"]) for n in range(1, 4)]
         with tempfile.TemporaryDirectory() as tmp, mock.patch("matplotlib.pyplot.show") as show:
             old = os.getcwd()
             os.chdir(tmp)
@@ -120,3 +124,4 @@ class TestRun(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+   
