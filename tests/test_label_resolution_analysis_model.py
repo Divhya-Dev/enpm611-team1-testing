@@ -19,7 +19,7 @@ def _issue(number, created, closed=None, labels=None, events=None, **extra):
         "created_date": created,
         "closed_at": closed,
         "closed_date": closed,
-        "labels": [{"name": l} if isinstance(l, str) else l for l in (labels or [])],
+        "labels": labels or [],
         "events": events or []
     }
     record.update(extra)
@@ -76,7 +76,7 @@ class TestAnalyze(unittest.TestCase):
             "created_date": "2024-04-10T00:00:00Z",
             "closed_at": "2024-04-14T00:00:00Z",
             "closed_date": "2024-04-14T00:00:00Z",
-            "labels": [{"name": "enhancement"}],
+            "labels": ["enhancement"],
             "events": []
         })
         result = lra.analyze([issue])
