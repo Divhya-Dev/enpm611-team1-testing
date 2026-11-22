@@ -1,13 +1,13 @@
-Name                               Stmts   Miss  Cover   Missing
-----------------------------------------------------------------
-config.py                             68     13    81%   22-23, 40-41, 44-45, 65, 79, 87, 113-114, 122-123
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+config.py                             68     13    81%
 contributor_activity_analysis.py      93      0   100%
-data_loader.py                        18      1    94%   43
-discussion_trend_analysis.py         104      1    99%   45
+data_loader.py                        18      1    94%
+discussion_trend_analysis.py         104      1    99%
 example_analysis.py                   28      0   100%
 issue_analysis_utils.py               52      0   100%
-label_resolution_analysis.py          46      6    87%   13, 16, 52-59
-model.py                              76      3    96%   90-92
+label_resolution_analysis.py          44      6    86%
+model.py                              63      0   100%
 run.py                                27      0   100%
-----------------------------------------------------------------
-TOTAL                                512     24    95%
+------------------------------------------------------
+TOTAL                                497     21    96%
