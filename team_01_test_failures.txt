@@ -1,0 +1,273 @@
+test_environment_dataset_path_overrides_config (tests.test_config.TestLabelResolutionConfig.test_environment_dataset_path_overrides_config) ... ok
+test_json_prefixed_environment_path_is_converted (tests.test_config.TestLabelResolutionConfig.test_json_prefixed_environment_path_is_converted) ... ok
+test_label_resolution_dataset_path_is_read_from_config (tests.test_config.TestLabelResolutionConfig.test_label_resolution_dataset_path_is_read_from_config) ... ok
+test_missing_dataset_path_returns_none (tests.test_config.TestLabelResolutionConfig.test_missing_dataset_path_returns_none) ... ok
+test_accepts_generator_input (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_accepts_generator_input) ... ok
+test_all_comment_event_type_spellings_counted (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_all_comment_event_type_spellings_counted) ... ok
+test_bot_comments_counted_in_total_comment_events (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_bot_comments_counted_in_total_comment_events) ... ok
+test_bots_are_excluded_by_default (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_bots_are_excluded_by_default) ... ok
+test_bots_included_when_requested (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_bots_included_when_requested) ... ok
+test_comment_without_author_counts_as_event_only (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_comment_without_author_counts_as_event_only) ... ok
+test_contributor_names_stripped_and_merged (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_contributor_names_stripped_and_merged) ... ok
+test_counts_with_model_objects (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_counts_with_model_objects) ... ok
+test_empty_input (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_empty_input) ... ok
+test_events_set_to_none_is_handled (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_events_set_to_none_is_handled) ... ok
+test_ghost_placeholder_not_ranked_as_a_contributor (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_ghost_placeholder_not_ranked_as_a_contributor) ... FAIL
+test_github_api_style_dicts (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_github_api_style_dicts) ... ok
+test_input_issues_not_modified (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_input_issues_not_modified) ... ok
+test_issue_without_author_and_events (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_issue_without_author_and_events) ... ok
+test_non_comment_events_are_ignored (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_non_comment_events_are_ignored) ... ok
+test_result_has_expected_keys (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_result_has_expected_keys) ... ok
+test_bars_stacked_with_correct_values (tests.test_contributor_activity_analysis.TestCreateChart.test_bars_stacked_with_correct_values) ... ok
+test_chart_file_is_saved (tests.test_contributor_activity_analysis.TestCreateChart.test_chart_file_is_saved) ... ok
+test_chart_limited_to_ten_contributors (tests.test_contributor_activity_analysis.TestCreateChart.test_chart_limited_to_ten_contributors) ... ok
+test_empty_results_skip_chart (tests.test_contributor_activity_analysis.TestCreateChart.test_empty_results_skip_chart) ... ok
+test_figure_closed (tests.test_contributor_activity_analysis.TestCreateChart.test_figure_closed) ... ok
+test_show_chart_false_does_not_display (tests.test_contributor_activity_analysis.TestCreateChart.test_show_chart_false_does_not_display) ... ok
+test_show_chart_true_displays (tests.test_contributor_activity_analysis.TestCreateChart.test_show_chart_true_displays) ... ok
+test_titles_axes_and_legend (tests.test_contributor_activity_analysis.TestCreateChart.test_titles_axes_and_legend) ... ok
+test_empty_results_print_hint (tests.test_contributor_activity_analysis.TestDisplayResults.test_empty_results_print_hint) ... ok
+test_only_top_ten_listed (tests.test_contributor_activity_analysis.TestDisplayResults.test_only_top_ten_listed) ... ok
+test_rows_sorted_by_total_descending (tests.test_contributor_activity_analysis.TestDisplayResults.test_rows_sorted_by_total_descending) ... ok
+test_summary_and_table_rows (tests.test_contributor_activity_analysis.TestDisplayResults.test_summary_and_table_rows) ... ok
+test_all_names_missing_returns_default (tests.test_contributor_activity_analysis.TestGetField.test_all_names_missing_returns_default) ... ok
+test_false_values_other_than_none_are_returned (tests.test_contributor_activity_analysis.TestGetField.test_false_values_other_than_none_are_returned) ... ok
+test_first_non_none_name_wins_in_dict (tests.test_contributor_activity_analysis.TestGetField.test_first_non_none_name_wins_in_dict) ... ok
+test_first_non_none_name_wins_in_object (tests.test_contributor_activity_analysis.TestGetField.test_first_non_none_name_wins_in_object) ... ok
+test_none_object_returns_default (tests.test_contributor_activity_analysis.TestGetField.test_none_object_returns_default) ... ok
+test_none_object_without_default_returns_none (tests.test_contributor_activity_analysis.TestGetField.test_none_object_without_default_returns_none) ... ok
+test_reads_attribute_from_object (tests.test_contributor_activity_analysis.TestGetField.test_reads_attribute_from_object) ... ok
+test_reads_key_from_dict (tests.test_contributor_activity_analysis.TestGetField.test_reads_key_from_dict) ... ok
+test_blank_string_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_blank_string_returns_none) ... ok
+test_dict_falls_back_to_username_then_name (tests.test_contributor_activity_analysis.TestGetUsername.test_dict_falls_back_to_username_then_name) ... ok
+test_dict_login_is_preferred (tests.test_contributor_activity_analysis.TestGetUsername.test_dict_login_is_preferred) ... ok
+test_dict_with_blank_login_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_dict_with_blank_login_returns_none) ... ok
+test_dict_without_known_keys_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_dict_without_known_keys_returns_none) ... ok
+test_non_string_login_is_converted_to_string (tests.test_contributor_activity_analysis.TestGetUsername.test_non_string_login_is_converted_to_string) ... ok
+test_none_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_none_returns_none) ... ok
+test_object_with_login_attribute (tests.test_contributor_activity_analysis.TestGetUsername.test_object_with_login_attribute) ... ok
+test_plain_string_is_returned (tests.test_contributor_activity_analysis.TestGetUsername.test_plain_string_is_returned) ... ok
+test_string_is_stripped (tests.test_contributor_activity_analysis.TestGetUsername.test_string_is_stripped) ... ok
+test_whitespace_only_login_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_whitespace_only_login_returns_none) ... FAIL
+test_bracket_bot_suffix (tests.test_contributor_activity_analysis.TestIsBot.test_bracket_bot_suffix) ... ok
+test_dash_bot_suffix (tests.test_contributor_activity_analysis.TestIsBot.test_dash_bot_suffix) ... ok
+test_empty_or_none_is_not_bot (tests.test_contributor_activity_analysis.TestIsBot.test_empty_or_none_is_not_bot) ... ok
+test_human_names_containing_bot_are_not_bots (tests.test_contributor_activity_analysis.TestIsBot.test_human_names_containing_bot_are_not_bots) ... ok
+test_regular_human_name (tests.test_contributor_activity_analysis.TestIsBot.test_regular_human_name) ... ok
+test_suffix_check_is_case_insensitive (tests.test_contributor_activity_analysis.TestIsBot.test_suffix_check_is_case_insensitive) ... ok
+test_underscore_bot_suffix (tests.test_contributor_activity_analysis.TestIsBot.test_underscore_bot_suffix) ... ok
+test_run_forwards_include_bots (tests.test_contributor_activity_analysis.TestRun.test_run_forwards_include_bots) ... ok
+test_run_returns_results_produces_all_output (tests.test_contributor_activity_analysis.TestRun.test_run_returns_results_produces_all_output) ... ok
+test_run_shows_chart_by_default (tests.test_contributor_activity_analysis.TestRun.test_run_shows_chart_by_default) ... ok
+test_bots_are_not_ranked (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_bots_are_not_ranked) ... ok
+test_bots_ranked_when_included (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_bots_ranked_when_included) ... ok
+test_display_rows_sorted_by_total_with_correct_columns (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_display_rows_sorted_by_total_with_correct_columns) ... ok
+test_issue_comment_counts_per_contributor (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_issue_comment_counts_per_contributor) ... ok
+test_mock_file_loaded (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_mock_file_loaded) ... ok
+test_non_comment_events_do_not_create_contributors (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_non_comment_events_do_not_create_contributors) ... ok
+test_top_ten_excludes_deleted_user_placeholder (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_top_ten_excludes_deleted_user_placeholder) ... FAIL
+test_totals (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_totals) ... ok
+test_get_issues_caches_dataset_for_analysis (tests.test_data_loader.TestLabelResolutionDataLoader.test_get_issues_caches_dataset_for_analysis) ... ok
+test_load_creates_issue_objects_with_resolution_fields (tests.test_data_loader.TestLabelResolutionDataLoader.test_load_creates_issue_objects_with_resolution_fields) ... ok
+test_load_raises_file_not_found_for_missing_dataset (tests.test_data_loader.TestLabelResolutionDataLoader.test_load_raises_file_not_found_for_missing_dataset) ... ok
+test_loader_reads_dataset_path_setting_used_by_analysis (tests.test_data_loader.TestLabelResolutionDataLoader.test_loader_reads_dataset_path_setting_used_by_analysis) ... ok
+test_comment_with_missing_author_or_date_is_ignored (tests.test_discussion_trend_analysis.TestAnalyze.test_comment_with_missing_author_or_date_is_ignored) ... ok
+test_created_at_alias_is_accepted (tests.test_discussion_trend_analysis.TestAnalyze.test_created_at_alias_is_accepted) ... ok
+test_empty_input (tests.test_discussion_trend_analysis.TestAnalyze.test_empty_input) ... ok
+test_issue_without_created_date_is_not_counted_as_opened (tests.test_discussion_trend_analysis.TestAnalyze.test_issue_without_created_date_is_not_counted_as_opened) ... ok
+test_label_filter_applies_to_comments_too (tests.test_discussion_trend_analysis.TestAnalyze.test_label_filter_applies_to_comments_too) ... ok
+test_months_without_activity_are_omitted (tests.test_discussion_trend_analysis.TestAnalyze.test_months_without_activity_are_omitted) ... ok
+test_odd_number_of_months_gives_extra_month_to_late_period (tests.test_discussion_trend_analysis.TestAnalyze.test_odd_number_of_months_gives_extra_month_to_late_period) ... ok
+test_only_commented_events_count (tests.test_discussion_trend_analysis.TestAnalyze.test_only_commented_events_count) ... ok
+test_rows_are_sorted_chronologically (tests.test_discussion_trend_analysis.TestAnalyze.test_rows_are_sorted_chronologically) ... ok
+test_single_month_leaves_early_period_empty (tests.test_discussion_trend_analysis.TestAnalyze.test_single_month_leaves_early_period_empty) ... ok
+test_works_with_issue_model_objects (tests.test_discussion_trend_analysis.TestAnalyze.test_works_with_issue_model_objects) ... ok
+test_no_rows (tests.test_discussion_trend_analysis.TestFinding.test_no_rows) ... ok
+test_period_with_comments_but_no_openings (tests.test_discussion_trend_analysis.TestFinding.test_period_with_comments_but_no_openings) ... ok
+test_single_month (tests.test_discussion_trend_analysis.TestFinding.test_single_month) ... ok
+test_two_periods (tests.test_discussion_trend_analysis.TestFinding.test_two_periods) ... ok
+test_bot_detection_matches_feature_2 (tests.test_discussion_trend_analysis.TestHelpers.test_bot_detection_matches_feature_2)
+DEFECT: Feature 3 does not treat the '_bot' suffix as a bot, but ... FAIL
+test_is_bot (tests.test_discussion_trend_analysis.TestHelpers.test_is_bot) ... ok
+test_matches_label (tests.test_discussion_trend_analysis.TestHelpers.test_matches_label) ... ok
+test_month_key (tests.test_discussion_trend_analysis.TestHelpers.test_month_key) ... ok
+test_month_key_converts_to_utc_before_bucketing (tests.test_discussion_trend_analysis.TestHelpers.test_month_key_converts_to_utc_before_bucketing) ... ok
+test_period_stats (tests.test_discussion_trend_analysis.TestHelpers.test_period_stats) ... ok
+test_period_stats_empty (tests.test_discussion_trend_analysis.TestHelpers.test_period_stats_empty) ... ok
+test_period_stats_without_issues_has_no_rate (tests.test_discussion_trend_analysis.TestHelpers.test_period_stats_without_issues_has_no_rate) ... ok
+test_rate_clause (tests.test_discussion_trend_analysis.TestHelpers.test_rate_clause) ... ok
+test_busiest_months_are_ranked_and_capped_at_five (tests.test_discussion_trend_analysis.TestRun.test_busiest_months_are_ranked_and_capped_at_five) ... ok
+test_chart_is_saved_in_images_directory (tests.test_discussion_trend_analysis.TestRun.test_chart_is_saved_in_images_directory) ... ok
+test_chart_skipped_when_there_is_nothing_to_plot (tests.test_discussion_trend_analysis.TestRun.test_chart_skipped_when_there_is_nothing_to_plot) ... ok
+test_chart_thins_x_axis_labels_for_long_series (tests.test_discussion_trend_analysis.TestRun.test_chart_thins_x_axis_labels_for_long_series) ... ok
+test_label_with_matches_prints_filter_notice (tests.test_discussion_trend_analysis.TestRun.test_label_with_matches_prints_filter_notice) ... ok
+test_label_with_no_matches (tests.test_discussion_trend_analysis.TestRun.test_label_with_no_matches) ... ok
+test_month_without_openings_prints_na (tests.test_discussion_trend_analysis.TestRun.test_month_without_openings_prints_na) ... ok
+test_no_data_without_label (tests.test_discussion_trend_analysis.TestRun.test_no_data_without_label) ... ok
+test_prints_question_method_and_finding (tests.test_discussion_trend_analysis.TestRun.test_prints_question_method_and_finding) ... ok
+test_bars_count_issues_per_creator_sorted_descending (tests.test_example_analysis.TestCreatorChart.test_bars_count_issues_per_creator_sorted_descending) ... ok
+test_chart_counts_issues_not_events (tests.test_example_analysis.TestCreatorChart.test_chart_counts_issues_not_events) ... ok
+test_chart_is_shown (tests.test_example_analysis.TestCreatorChart.test_chart_is_shown) ... ok
+test_empty_dataset_raises_key_error (tests.test_example_analysis.TestCreatorChart.test_empty_dataset_raises_key_error) ... ok
+test_figure_size (tests.test_example_analysis.TestCreatorChart.test_figure_size) ... ok
+test_issues_without_creator_are_not_plotted (tests.test_example_analysis.TestCreatorChart.test_issues_without_creator_are_not_plotted) ... ok
+test_only_top_50_creators_are_plotted (tests.test_example_analysis.TestCreatorChart.test_only_top_50_creators_are_plotted) ... ok
+test_title_and_axis_labels (tests.test_example_analysis.TestCreatorChart.test_title_and_axis_labels) ... ok
+test_counts_every_event_of_every_type (tests.test_example_analysis.TestEventCountAllUsers.test_counts_every_event_of_every_type) ... ok
+test_issues_come_from_data_loader (tests.test_example_analysis.TestEventCountAllUsers.test_issues_come_from_data_loader) ... ok
+test_issues_without_events (tests.test_example_analysis.TestEventCountAllUsers.test_issues_without_events) ... ok
+test_message_has_no_user_suffix (tests.test_example_analysis.TestEventCountAllUsers.test_message_has_no_user_suffix) ... ok
+test_message_is_padded_with_blank_lines (tests.test_example_analysis.TestEventCountAllUsers.test_message_is_padded_with_blank_lines) ... ok
+test_counts_only_that_users_events (tests.test_example_analysis.TestEventCountForUser.test_counts_only_that_users_events) ... ok
+test_match_is_case_sensitive (tests.test_example_analysis.TestEventCountForUser.test_match_is_case_sensitive) ... ok
+test_other_user (tests.test_example_analysis.TestEventCountForUser.test_other_user) ... ok
+test_unknown_user_has_zero_events (tests.test_example_analysis.TestEventCountForUser.test_unknown_user_has_zero_events) ... ok
+test_user_filter_does_not_affect_issue_total_or_chart (tests.test_example_analysis.TestEventCountForUser.test_user_filter_does_not_affect_issue_total_or_chart) ... ok
+test_constructor_does_not_load_data (tests.test_example_analysis.TestInit.test_constructor_does_not_load_data) ... ok
+test_user_defaults_to_none (tests.test_example_analysis.TestInit.test_user_defaults_to_none) ... ok
+test_user_is_read_from_config (tests.test_example_analysis.TestInit.test_user_is_read_from_config) ... ok
+test_running_module_as_script_runs_analysis (tests.test_example_analysis.TestMainBlock.test_running_module_as_script_runs_analysis) ... ok
+test_full_run (tests.test_example_analysis.TestWithMockedPoetryFile.test_full_run) ... ok
+test_bool_is_zero (tests.test_issue_analysis_utils.TestCommentCount.test_bool_is_zero) ... ok
+test_collections_are_counted_by_length (tests.test_issue_analysis_utils.TestCommentCount.test_collections_are_counted_by_length) ... ok
+test_float_is_truncated (tests.test_issue_analysis_utils.TestCommentCount.test_float_is_truncated) ... ok
+test_integer_and_numeric_string (tests.test_issue_analysis_utils.TestCommentCount.test_integer_and_numeric_string) ... ok
+test_invalid_values_are_zero (tests.test_issue_analysis_utils.TestCommentCount.test_invalid_values_are_zero) ... ok
+test_missing_field_is_zero (tests.test_issue_analysis_utils.TestCommentCount.test_missing_field_is_zero) ... ok
+test_negative_is_clamped_to_zero (tests.test_issue_analysis_utils.TestCommentCount.test_negative_is_clamped_to_zero) ... ok
+test_object_attribute (tests.test_issue_analysis_utils.TestCommentCount.test_object_attribute) ... ok
+test_dict_key_missing_returns_default (tests.test_issue_analysis_utils.TestField.test_dict_key_missing_returns_default) ... ok
+test_dict_key_present (tests.test_issue_analysis_utils.TestField.test_dict_key_present) ... ok
+test_dict_key_with_none_value_returns_none_not_default (tests.test_issue_analysis_utils.TestField.test_dict_key_with_none_value_returns_none_not_default) ... ok
+test_model_issue_attribute (tests.test_issue_analysis_utils.TestField.test_model_issue_attribute) ... ok
+test_object_attribute_missing_returns_default (tests.test_issue_analysis_utils.TestField.test_object_attribute_missing_returns_default) ... ok
+test_object_attribute_present (tests.test_issue_analysis_utils.TestField.test_object_attribute_present) ... ok
+test_dataset_issue_without_pull_request_field (tests.test_issue_analysis_utils.TestIsIssue.test_dataset_issue_without_pull_request_field) ... ok
+test_falsy_pull_request_values_are_issues (tests.test_issue_analysis_utils.TestIsIssue.test_falsy_pull_request_values_are_issues) ... ok
+test_object_with_pull_request_attribute (tests.test_issue_analysis_utils.TestIsIssue.test_object_with_pull_request_attribute) ... ok
+test_truthy_pull_request_values_are_not_issues (tests.test_issue_analysis_utils.TestIsIssue.test_truthy_pull_request_values_are_not_issues) ... ok
+test_duplicates_and_order_are_kept (tests.test_issue_analysis_utils.TestIssueLabels.test_duplicates_and_order_are_kept) ... ok
+test_items_without_name_are_skipped (tests.test_issue_analysis_utils.TestIssueLabels.test_items_without_name_are_skipped) ... ok
+test_list_of_github_api_dicts (tests.test_issue_analysis_utils.TestIssueLabels.test_list_of_github_api_dicts) ... ok
+test_list_of_objects_with_name (tests.test_issue_analysis_utils.TestIssueLabels.test_list_of_objects_with_name) ... ok
+test_list_of_strings_from_dataset (tests.test_issue_analysis_utils.TestIssueLabels.test_list_of_strings_from_dataset) ... ok
+test_missing_none_or_empty_labels (tests.test_issue_analysis_utils.TestIssueLabels.test_missing_none_or_empty_labels) ... ok
+test_model_issue (tests.test_issue_analysis_utils.TestIssueLabels.test_model_issue) ... ok
+test_non_string_names_are_converted (tests.test_issue_analysis_utils.TestIssueLabels.test_non_string_names_are_converted) ... ok
+test_single_string_is_wrapped (tests.test_issue_analysis_utils.TestIssueLabels.test_single_string_is_wrapped) ... ok
+test_closed_at_is_used_when_present (tests.test_issue_analysis_utils.TestResolutionDays.test_closed_at_is_used_when_present) ... ok
+test_closed_at_same_moment_is_zero_days (tests.test_issue_analysis_utils.TestResolutionDays.test_closed_at_same_moment_is_zero_days) ... ok
+test_closed_before_created_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_closed_before_created_returns_none) ... ok
+test_closed_dict_uses_closed_event (tests.test_issue_analysis_utils.TestResolutionDays.test_closed_dict_uses_closed_event) ... ok
+test_closed_without_dated_closed_event_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_closed_without_dated_closed_event_returns_none) ... ok
+test_created_at_is_used_when_created_date_missing (tests.test_issue_analysis_utils.TestResolutionDays.test_created_at_is_used_when_created_date_missing) ... ok
+test_events_none_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_events_none_returns_none) ... ok
+test_latest_closed_event_is_used_after_reopening (tests.test_issue_analysis_utils.TestResolutionDays.test_latest_closed_event_is_used_after_reopening) ... ok
+test_missing_created_date_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_missing_created_date_returns_none) ... ok
+test_missing_state_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_missing_state_returns_none) ... ok
+test_mixed_timezones_are_compared_in_utc (tests.test_issue_analysis_utils.TestResolutionDays.test_mixed_timezones_are_compared_in_utc) ... ok
+test_model_issue_with_state_enum (tests.test_issue_analysis_utils.TestResolutionDays.test_model_issue_with_state_enum) ... ok
+test_non_closed_events_are_ignored (tests.test_issue_analysis_utils.TestResolutionDays.test_non_closed_events_are_ignored) ... ok
+test_open_issue_returns_none (tests.test_issue_analysis_utils.TestResolutionDays.test_open_issue_returns_none) ... ok
+test_state_string_is_case_insensitive (tests.test_issue_analysis_utils.TestResolutionDays.test_state_string_is_case_insensitive) ... ok
+test_undated_closed_events_are_ignored (tests.test_issue_analysis_utils.TestResolutionDays.test_undated_closed_events_are_ignored) ... ok
+test_aware_datetime_is_converted_to_utc (tests.test_issue_analysis_utils.TestTimestamp.test_aware_datetime_is_converted_to_utc) ... ok
+test_dataset_style_string (tests.test_issue_analysis_utils.TestTimestamp.test_dataset_style_string) ... ok
+test_date_only_string (tests.test_issue_analysis_utils.TestTimestamp.test_date_only_string) ... ok
+test_iso_string_with_offset_is_converted (tests.test_issue_analysis_utils.TestTimestamp.test_iso_string_with_offset_is_converted) ... ok
+test_iso_string_with_z_suffix (tests.test_issue_analysis_utils.TestTimestamp.test_iso_string_with_z_suffix) ... ok
+test_naive_datetime_is_treated_as_utc (tests.test_issue_analysis_utils.TestTimestamp.test_naive_datetime_is_treated_as_utc) ... ok
+test_naive_string_is_treated_as_utc (tests.test_issue_analysis_utils.TestTimestamp.test_naive_string_is_treated_as_utc) ... ok
+test_none_and_empty_string_return_none (tests.test_issue_analysis_utils.TestTimestamp.test_none_and_empty_string_return_none) ... ok
+test_unparsable_values_return_none (tests.test_issue_analysis_utils.TestTimestamp.test_unparsable_values_return_none) ... ok
+test_empty_input (tests.test_label_resolution_analysis_model.TestAnalyze.test_empty_input)
+analyze handles empty issue lists gracefully. ... ok
+test_issue_with_multiple_labels_contributes_to_each (tests.test_label_resolution_analysis_model.TestAnalyze.test_issue_with_multiple_labels_contributes_to_each)
+an issue with multiple labels should count toward the metrics of each individual label. ... ok
+test_selected_label_filter (tests.test_label_resolution_analysis_model.TestAnalyze.test_selected_label_filter)
+filtering by a specific label restricts analysis output correctly. ... ok
+test_single_label_resolution_metrics (tests.test_label_resolution_analysis_model.TestAnalyze.test_single_label_resolution_metrics)
+verify correct aggregation of median and mean resolution days for a specific label. ... ok
+test_works_with_issue_model_objects (tests.test_label_resolution_analysis_model.TestAnalyze.test_works_with_issue_model_objects)
+ensure the analyzer correctly processes native Issue model instances. ... ok
+test_chart_is_saved_in_images_directory (tests.test_label_resolution_analysis_model.TestRun.test_chart_is_saved_in_images_directory)
+ensure analysis generates and saves visual charts safely into the images folder. ... ok
+test_chart_skipped_when_empty (tests.test_label_resolution_analysis_model.TestRun.test_chart_skipped_when_empty)
+chart generation is bypassed safely if there is no data to plot. ... ok
+test_label_with_no_matches_prints_notice (tests.test_label_resolution_analysis_model.TestRun.test_label_with_no_matches_prints_notice)
+run output notifies when a filtered label has no matching data. ... ok
+test_prints_question_method_and_finding (tests.test_label_resolution_analysis_model.TestRun.test_prints_question_method_and_finding)
+run output prints proper metrics summary when valid data is present. ... ok
+test_all_fields_parsed (tests.test_model.TestEvent.test_all_fields_parsed) ... ok
+test_defaults_when_no_json (tests.test_model.TestEvent.test_defaults_when_no_json) ... ok
+test_missing_date_leaves_none (tests.test_model.TestEvent.test_missing_date_leaves_none) ... ok
+test_missing_keys_default_to_none (tests.test_model.TestEvent.test_missing_keys_default_to_none) ... ok
+test_unparseable_date_leaves_none (tests.test_model.TestEvent.test_unparseable_date_leaves_none) ... ok
+test_all_fields_parsed (tests.test_model.TestIssue.test_all_fields_parsed) ... ok
+test_defaults_when_no_json (tests.test_model.TestIssue.test_defaults_when_no_json) ... ok
+test_events_are_converted_to_event_objects (tests.test_model.TestIssue.test_events_are_converted_to_event_objects) ... ok
+test_invalid_dates_leave_none (tests.test_model.TestIssue.test_invalid_dates_leave_none) ... ok
+test_invalid_number_falls_back_to_minus_one (tests.test_model.TestIssue.test_invalid_number_falls_back_to_minus_one) ... ok
+test_missing_dates_leave_none (tests.test_model.TestIssue.test_missing_dates_leave_none) ... ok
+test_missing_optional_lists_default_to_empty (tests.test_model.TestIssue.test_missing_optional_lists_default_to_empty) ... ok
+test_missing_state_raises_key_error (tests.test_model.TestIssue.test_missing_state_raises_key_error) ... ok
+test_number_given_as_string_is_converted (tests.test_model.TestIssue.test_number_given_as_string_is_converted) ... ok
+test_open_state (tests.test_model.TestIssue.test_open_state) ... ok
+test_unknown_state_raises_key_error (tests.test_model.TestIssue.test_unknown_state_raises_key_error) ... ok
+test_lookup_by_name (tests.test_model.TestState.test_lookup_by_name) ... ok
+test_state_compares_equal_to_plain_string (tests.test_model.TestState.test_state_compares_equal_to_plain_string) ... ok
+test_values (tests.test_model.TestState.test_values) ... ok
+test_arguments_are_published_to_config (tests.test_run.TestRunEntryPoint.test_arguments_are_published_to_config) ... ok
+test_feature_0_runs_example_analysis (tests.test_run.TestRunEntryPoint.test_feature_0_runs_example_analysis) ... ok
+test_feature_1_runs_label_resolution_with_label (tests.test_run.TestRunEntryPoint.test_feature_1_runs_label_resolution_with_label) ... ok
+test_feature_1_without_label_passes_none (tests.test_run.TestRunEntryPoint.test_feature_1_without_label_passes_none) ... ok
+test_feature_2_runs_contributor_activity (tests.test_run.TestRunEntryPoint.test_feature_2_runs_contributor_activity) ... ok
+test_feature_3_runs_discussion_trend_with_label (tests.test_run.TestRunEntryPoint.test_feature_3_runs_discussion_trend_with_label) ... ok
+test_missing_feature_flag_exits_with_usage_error (tests.test_run.TestRunEntryPoint.test_missing_feature_flag_exits_with_usage_error) ... ok
+test_non_integer_feature_exits_with_usage_error (tests.test_run.TestRunEntryPoint.test_non_integer_feature_exits_with_usage_error) ... ok
+test_short_flags_are_accepted (tests.test_run.TestRunEntryPoint.test_short_flags_are_accepted) ... ok
+test_unknown_feature_prints_help_message (tests.test_run.TestRunEntryPoint.test_unknown_feature_prints_help_message) ... ok
+
+======================================================================
+FAIL: test_ghost_placeholder_not_ranked_as_a_contributor (tests.test_contributor_activity_analysis.TestAnalyzeContributorActivity.test_ghost_placeholder_not_ranked_as_a_contributor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jerem\Downloads\enpm611-team1-testing\tests\test_contributor_activity_analysis.py", line 318, in test_ghost_placeholder_not_ranked_as_a_contributor
+    self.assertNotIn("ghost", result["contributors"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ghost' unexpectedly found in Counter({'ghost': 6, 'alice': 1})
+
+======================================================================
+FAIL: test_whitespace_only_login_returns_none (tests.test_contributor_activity_analysis.TestGetUsername.test_whitespace_only_login_returns_none)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jerem\Downloads\enpm611-team1-testing\tests\test_contributor_activity_analysis.py", line 148, in test_whitespace_only_login_returns_none
+    self.assertIsNone(get_username({"login": "   "}))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' is not None
+
+======================================================================
+FAIL: test_top_ten_excludes_deleted_user_placeholder (tests.test_contributor_activity_analysis.TestWithMockedPoetryData.test_top_ten_excludes_deleted_user_placeholder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jerem\Downloads\enpm611-team1-testing\tests\test_contributor_activity_analysis.py", line 632, in test_top_ten_excludes_deleted_user_placeholder
+    self.assertNotIn("ghost", top_ten)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: 'ghost' unexpectedly found in ['ghost', 'abn', 'dimbleby', 'dbrtly', 'turbotimon', 'radoering']
+
+======================================================================
+FAIL: test_bot_detection_matches_feature_2 (tests.test_discussion_trend_analysis.TestHelpers.test_bot_detection_matches_feature_2)
+DEFECT: Feature 3 does not treat the '_bot' suffix as a bot, but
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jerem\Downloads\enpm611-team1-testing\tests\test_discussion_trend_analysis.py", line 38, in test_bot_detection_matches_feature_2
+    self.assertEqual(dta._is_bot("release_bot"), caa.is_bot("release_bot"))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 219 tests in 1.756s
+
+FAILED (failures=4)
+Loaded 1 issues from poetry_issues_all.json.
+No closed issues with valid creation and closing dates were found.
