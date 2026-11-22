@@ -12,15 +12,17 @@ from model import Issue
 
 def _issue(number, created, closed=None, labels=None, events=None, **extra):
     """helper to build a mock Issue model instance with creation, closure, and labels."""
+    # The real Issue model keeps no closed_at field; closure is recorded as a
+    # "closed" event, so build that event exactly as the JSON data does.
+    events = list(events or [])
+    if closed:
+        events.append({"event_type": "closed", "author": "maintainer", "event_date": closed})
     record = {
         "number": number,
         "state": "closed" if closed else "open",
-        "created_at": created,
         "created_date": created,
-        "closed_at": closed,
-        "closed_date": closed,
         "labels": labels or ["Bug"],
-        "events": events or []
+        "events": events
     }
     record.update(extra)
     return Issue(record)
@@ -75,12 +77,10 @@ class TestAnalyze(unittest.TestCase):
         issue = Issue({
             "number": 1,
             "state": "closed",
-            "created_at": "2024-04-10T00:00:00Z",
             "created_date": "2024-04-10T00:00:00Z",
-            "closed_at": "2024-04-14T00:00:00Z",
-            "closed_date": "2024-04-14T00:00:00Z",
             "labels": ["Enhancement"],
-            "events": []
+            "events": [{"event_type": "closed", "author": "maintainer",
+                        "event_date": "2024-04-14T00:00:00Z"}]
         })
         result = lra.analyze([issue])
         self.assertTrue(len(result["rows"]) > 0)
@@ -112,6 +112,7 @@ class TestRun(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp, mock.patch("matplotlib.pyplot.show") as show:
             old = os.getcwd()
             os.chdir(tmp)
+            os.makedirs("images")  # run() saves to a relative images/ directory
             try:
                 self._run(issues, show_chart=True)
                 self.assertTrue(os.path.isfile(os.path.join("images", "label_resolution_chart.png")))
